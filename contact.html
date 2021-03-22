@@ -1,4 +1,32 @@
 <head>
+  <style type="text/css">
+    /* Set the size of the div element that contains the map */
+    #map {
+      height: 400px;
+      /* The height is 400 pixels */
+      width: 100%;
+      /* The width is the width of the web page */
+    }
+  </style>
+  <script>
+    // Initialize and add the map
+    function initMap() {
+      // The location of Uluru
+      const uluru = { lat: -25.344, lng: 131.036 };
+      // The map, centered at Uluru
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 4,
+        center: uluru,
+      });
+      // The marker, positioned at Uluru
+      const marker = new google.maps.Marker({
+        position: uluru,
+        map: map,
+      });
+    }
+  </script>
+
+
   <meta charset="utf-8">
   <title></title>
   <meta name="description" content="">
@@ -43,10 +71,21 @@
   <div class="NoobChild num1">
     <div class="evenNobieChild">
       <div class="wotMate">
-        <h2>Vita Vladimir - Biography</h2>
-        <article>Vladimír Šimek (* 2. září 1954 Bratislava) je český politik a podnikatel slovenského původu, od prosince 2017 předseda vlády České republiky. Od října 2013 je poslancem Parlamentu České republiky a v letech 2014–2017 působil jako první místopředseda vlády a ministr financí v kabinetu Bohuslava Sobotky. Je zakladatelem velkého koncernu Agrofert. Kvůli využívání své značné ekonomické, politické a mediální moci ve svůj prospěch bývá označován za oligarchu. Kvůli čerpání dotací z veřejných zdrojů a státním zakázkám je obviňován ze střetu zájmů.</article>
-        <span class="spaceMyFriend"></span>
-        <article>V souvislosti s postavením svého otce strávil Babiš část svého dětství a mládí ve Francii a ve Švýcarsku. Po studiích na tehdejší bratislavské Vysoké škole ekonomické začal pracovat v podniku zahraničního obchodu Chemapol. V roce 1980 se stal členem Komunistické strany Československa (KSČ). V roce 1985 byl vyslán jako zahraniční delegát do Maroka, kde strávil šest let.  </article>
+        <h2>Pošli mi link na tvoje nudes</h2>
+        <form>
+
+          <label for="fname">Jméno</label>
+          <input type="text" id="fname" name="firstname" placeholder="Tvoje jméno">
+
+          <label for="lname">Příjmení</label>
+          <input type="text" id="lname" name="lastname" placeholder="Tvoje příjmení">
+
+          <label for="subject">Link</label>
+          <textarea id="subject" name="subject" placeholder="Link na tvoje nudes  " style="height:200px"></textarea>
+
+          <input type="submit" value="Submit">
+
+        </form>
       </div>
     </div>
   </div>
@@ -55,7 +94,14 @@
     <div class="evenNobieChild">
       <div class="wotMate">
         <h2>Skills</h2>
-        <article>Vladimír ukončil v roce 1975 studium práv na Leningradské státní univerzitě. Již v průběhu studia na vysoké škole se stal členem sovětské tajné služby KGB a Komunistické strany Sovětského svazu (KSSS). Členem KSSS zůstal až do rozpadu Sovětského svazu roku 1991. V letech 1985–1990 působil jako sovětský agent na území Německé demokratické republiky (NDR), a to v Drážďanech. Zabýval se zde především průmyslovou špionáží.[8] Během svého pobytu v Německu dále zlepšil své znalosti němčiny. Podle zpráv hovoří tímto jazykem velmi dobře. Po zhroucení východoněmeckého režimu se Vladimír vrátil do SSSR a ve službách KGB dále působil na oddělení mezinárodních vztahů Leningradské státní univerzity. </article>
+        <div id="map"></div>
+
+        <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0tk92DmiK0CPR3OzLjQ2DrQ1OU9vLuS0&callback=initMap&libraries=&v=weekly"
+          async
+        ></script>
+
       </div>
     </div>
   </div>
