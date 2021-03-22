@@ -50,7 +50,7 @@ body {
     justify-content: space-between;
   }
 }
-@media screen and (max-width: 1600px){
+@media screen and (max-width: 800px){
   .headerInsideBox {
     width: 80vw;
     display: flex;
@@ -64,4 +64,44 @@ body {
   float: left;
   width: 70px;
   height: 70px;
+}
+
+.ProfessionalParent {
+  display: flex;
+}
+
+.NoobChild {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: calc(100vh - 80px);
+  justify-content: center;
+
+}
+
+.evenNobieChild {
+  background-color: #111;
+  width: 80%;
+  height: 80%;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.wotMate {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.wotMate h2 {
+  color: white;
+}
+
+.wotMate article {
+  color: white;
+}
+
+.spaceMyFriend {
+  height: 12px;
+  display: block;
+  width: 100%;
 }
